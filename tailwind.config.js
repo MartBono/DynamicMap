@@ -1,0 +1,35 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+    "./.storybook/**/*.{js,ts,jsx,tsx}",
+  ],
+  safelist: [
+    'h-screen',
+    'w-screen',
+    'absolute',
+    'top-4',
+    'left-4',
+    'z-10',
+    'bg-white',
+    'p-4',
+    'rounded-lg',
+    'shadow-lg',
+    'max-w-sm',
+    'text-xl',
+    'font-bold',
+    'text-gray-800',
+    'mb-2',
+    'text-sm',
+    'text-gray-600',
+    'mb-3',
+    'text-xs',
+    'text-gray-500',
+    'bg-gray-100',
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}

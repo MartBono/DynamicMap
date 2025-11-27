@@ -1,0 +1,8 @@
+/* hide default attribution */
+.maplibregl-ctrl-bottom-right {
+  @apply hidden;
+}
+
+/* .maplibregl-canvas {
+  @apply rounded-md;
+} */

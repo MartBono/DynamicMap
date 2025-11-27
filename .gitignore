@@ -1,0 +1,10 @@
+node_modules/
+dist/
+storybook-static/
+*.log
+.DS_Store
+.env*
+.vscode/
+.idea/
+*.tgz
+*.tar.gz

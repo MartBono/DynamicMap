@@ -1,0 +1,87 @@
+{
+  "name": "dynamic-map",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "A React/Next.js component library for dynamic mapping components",
+  "main": "dist/dynamic-map.umd.js",
+  "module": "dist/dynamic-map.es.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/dynamic-map.es.js",
+      "require": "./dist/dynamic-map.umd.js"
+    },
+    "./style.css": "./dist/style.css"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "LIB_BUILD=true tsc && vite build",
+    "dev": "vite",
+    "demo": "vite --mode development",
+    "preview": "vite preview",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "test": "jest",
+    "lint": "eslint src --ext .ts,.tsx",
+    "prepare": "npm run build"
+  },
+  "keywords": [
+    "react",
+    "nextjs",
+    "component-library",
+    "mapping",
+    "dynamic"
+  ],
+  "author": "Mart Groothuis",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": ">=18.0.0 || ^19.0.0",
+    "react-dom": ">=18.0.0 || ^19.0.0",
+    "maplibre-gl": ">=4.0.0",
+    "pmtiles": ">=3.0.0"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@storybook/addon-essentials": "^8.4.7",
+    "@storybook/addon-interactions": "^8.4.7",
+    "@storybook/addon-links": "^8.4.7",
+    "@storybook/blocks": "^8.4.7",
+    "@storybook/react": "^8.4.7",
+    "@storybook/react-vite": "^8.4.7",
+    "@storybook/testing-library": "^0.2.0",
+    "@types/node": "^20.0.0",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.0",
+    "eslint": "^8.0.0",
+    "postcss": "^8.4.0",
+    "eslint-plugin-react": "^7.0.0",
+    "eslint-plugin-react-hooks": "^4.0.0",
+    "eslint-plugin-storybook": "^0.6.0",
+    "jest": "^29.0.0",
+    "maplibre-gl": "^4.7.1",
+    "pmtiles": "^3.0.7",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "storybook": "^8.4.7",
+    "tailwindcss": "^3.4.0",
+    "typescript": "^5.7.2",
+    "vite": "^5.4.11",
+    "vite-plugin-dts": "^3.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/martgroothuis/dynamic-map.git"
+  },
+  "homepage": "https://github.com/martgroothuis/dynamic-map#readme",
+  "bugs": {
+    "url": "https://github.com/martgroothuis/dynamic-map/issues"
+  }
+}
