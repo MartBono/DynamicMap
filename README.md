@@ -16,14 +16,19 @@ npm run build
 npm test
 ```
 
-## Contributing
+## Building and Packaging
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+To create a distributable npm package:
 
-## License
+```bash
+# Build the library
+npm run build
 
-This project is licensed under the MIT License.
+# Create a .tgz tarball
+npm pack
+
+# Publish to npm (after bumping version)
+npm publish
+```
+
+

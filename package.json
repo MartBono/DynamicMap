@@ -1,6 +1,6 @@
 {
   "name": "dynamic-map",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "type": "module",
   "description": "A React/Next.js component library for dynamic mapping components",
   "main": "dist/dynamic-map.umd.js",
