@@ -1,12 +1,9 @@
 import type { StorybookConfig } from '@storybook/react-vite';
+import tailwindcss from '@tailwindcss/postcss';
 
 const config: StorybookConfig = {
   stories: ['../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
-  addons: [
-    '@storybook/addon-links',
-    '@storybook/addon-essentials',
-    '@storybook/addon-interactions',
-  ],
+  addons: ['@storybook/addon-links', '@storybook/addon-docs'],
   framework: {
     name: '@storybook/react-vite',
     options: {},
@@ -17,8 +14,7 @@ const config: StorybookConfig = {
       css: {
         postcss: {
           plugins: [
-            require('tailwindcss'),
-            require('autoprefixer'),
+            tailwindcss,
           ],
         },
       },
