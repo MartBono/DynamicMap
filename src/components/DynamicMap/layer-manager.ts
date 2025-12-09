@@ -135,6 +135,18 @@ export const removeOverlayFromMap = (
         );
 
         if (!isSourceUsedElsewhere && map.getSource(sourceId)) {
+          const mapLayers = map.getStyle().layers || [];
+          const layersUsingSource = mapLayers.filter(
+            (layer) => "source" in layer && layer.source === sourceId,
+          );
+          
+          if (layersUsingSource.length > 0) {
+            console.warn(
+              `Cannot remove source ${sourceId}: still used by layers ${layersUsingSource.map((l) => l.id).join(", ")}`,
+            );
+            return;
+          }
+          
           map.removeSource(sourceId);
         }
       } catch (err) {

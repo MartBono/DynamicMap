@@ -1,31 +1,12 @@
-/* Tailwind CSS directives */
-@import 'tailwindcss';
-
-@config '../../../tailwind.config.js';
-
-/*
-  The default border color has changed to `currentcolor` in Tailwind CSS v4,
-  so we've added these compatibility styles to make sure everything still
-  looks the same as it did with Tailwind CSS v3.
-
-  If we ever want to remove these styles, we need to add an explicit border
-  color utility to any element that depends on these defaults.
-*/
-@layer base {
-  *,
-  ::after,
-  ::before,
-  ::backdrop,
-  ::file-selector-button {
-    border-color: var(--color-gray-200, currentcolor);
-  }
-}
-
 /* Component-specific styles */
 .dynamic-map-container {
-  @apply h-screen w-screen;
+  height: 100vh;
+  width: 100vw;
 }
 
-/* Ensure common utility classes are included */
+/* Utility classes */
 .h-screen { height: 100vh; }
 .w-screen { width: 100vw; }
+.h-full { height: 100%; }
+.w-full { width: 100%; }
+.relative { position: relative; }

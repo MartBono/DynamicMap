@@ -170,11 +170,18 @@ export function Map({
           sourceId in overlay.sources &&
           existingOverlay.sources[sourceId] !== overlay.sources[sourceId],
       );
+      
       removedSources.forEach((sourceId) => {
+        existingOverlay.layers?.forEach((layer) => {
+          if ("source" in layer && layer.source === sourceId && map.getLayer(layer.id)) {
+            map.removeLayer(layer.id);
+          }
+        });
         if (map.getSource(sourceId)) {
           map.removeSource(sourceId);
         }
       });
+      
       addedSources.forEach((sourceId) => {
         const source = overlay.sources[sourceId];
         if (source) {
@@ -222,8 +229,8 @@ export function Map({
   }, [createMap]);
 
   return (
-    <div className="map-wrap relative h-full w-full">
-      <div ref={mapContainer} className="map h-full" />
+    <div className="map-wrap">
+      <div ref={mapContainer} className="map" />
       {children}
     </div>
   );

@@ -1,8 +1,14 @@
 /* hide default attribution */
 .maplibregl-ctrl-bottom-right {
-  @apply hidden;
+  display: none;
 }
 
-/* .maplibregl-canvas {
-  @apply rounded-md;
-} */
+.map-wrap {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.map {
+  height: 100%;
+}
