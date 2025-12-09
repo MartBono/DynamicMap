@@ -98,7 +98,7 @@ export function Map({
         });
       }
     });
-  }, [map, activeOverlays, isStyleLoaded]);
+  }, [map, isStyleLoaded]);
 
   useEffect(() => {
     if (!map || !isStyleLoaded) return;
@@ -110,21 +110,7 @@ export function Map({
     sortedOverlays.forEach((overlay) => {
       addOverlayToMap(map, activeOverlays, overlay);
     });
-  }, [map, isStyleLoaded]);
-
-  useEffect(() => {
-    if (!map) return;
-
-    const handleStyleData = () => {
-      // setIsStyleLoaded(true);
-    };
-
-    map.on("styledata", handleStyleData);
-
-    return () => {
-      map.off("styledata", handleStyleData);
-    };
-  }, [map]);
+  }, [map, isStyleLoaded, activeOverlays]);
 
   useEffect(() => {
     return () => {

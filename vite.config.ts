@@ -16,9 +16,6 @@ export default defineConfig(({ command, mode }) => {
           exclude: ['src/demo/**/*']
         }),
       ],
-      css: {
-        postcss: './postcss.config.js',
-      },
       resolve: {
         alias: {
           '@': resolve(__dirname, './src'),
@@ -48,9 +45,6 @@ export default defineConfig(({ command, mode }) => {
     // Development/demo configuration
     return {
       plugins: [react()],
-      css: {
-        postcss: './postcss.config.js',
-      },
       resolve: {
         alias: {
           '@': resolve(__dirname, './src'),

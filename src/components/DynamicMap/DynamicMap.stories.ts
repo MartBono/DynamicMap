@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { TestMap } from './default-map';
+import { DefaultMap } from './default-map';
 import CartoStyle from './overlayStyle/carto';
 import ColorfulStyle from './overlayStyle/colorful';
 
 const meta = {
   title: 'Maps/DynamicMap',
-  component: TestMap,
+  component: DefaultMap,
   parameters: {
     layout: 'fullscreen',
     docs: {
@@ -21,7 +21,7 @@ const meta = {
       control: 'object'
     }
   }
-} satisfies Meta<typeof TestMap>;
+} satisfies Meta<typeof DefaultMap>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

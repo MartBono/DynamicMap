@@ -11,11 +11,11 @@ interface DefaultMapProps {
   overlays: OverlayStyle[];
 }
 
-export function TestMap({ overlays }: DefaultMapProps) {
+export function DefaultMap({ overlays }: DefaultMapProps) {
   const [map, setMap] = useState<maplibregl.Map | null>(null);
 
   return (
-    <div className="h-screen w-screen">
+    <div style={{ height: "100vh", width: "100vw" }}>
       <Map
         overlays={overlays}
         center={[5.0, 52.0]}
